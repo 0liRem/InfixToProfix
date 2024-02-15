@@ -1,4 +1,4 @@
-public interface Icalculadora {
+ interface Icalculadora {
 
     public double sumar(double valor, double valor2);
     public double restar(double valor, double valor2);

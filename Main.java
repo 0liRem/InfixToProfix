@@ -12,6 +12,7 @@
 //
 //   Recursos:
 //https://keepcoding.io/blog/que-es-stack-tecnologico/
+// Algoritmo de infix a postfix proporcionado por la universidad del valle
 
 //   Historia de Modificaciones:
 //

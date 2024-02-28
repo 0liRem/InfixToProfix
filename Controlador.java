@@ -35,13 +35,19 @@ public class Controlador {
 
             dat.add(linea.toString());
             }
-                //Obtener el String del archivo.
-                for (String xd:dat){
-
-                    //Recorrer el String, caracter por caracter.
+            String Datos=dat.toString();
+            InfixToPosfix infix=new InfixToPosfix();
+            Datos=Datos.replace("]" , " ");
+            Datos=Datos.replace("[","");
+            System.out.println("Datos en infix: "+Datos);
+            Datos=infix.infixToPostfix(Datos).strip();
+            System.out.println("Datos en posfix: "+Datos);
+        
+           
                     // Funcion para para el stackes un operando o número.
-                    for(int i=0; i<xd.length(); i++ ){
-                        String letra = Character.toString(xd.charAt(i));
+                for (String xd:dat){
+                    for(int i=0; i<Datos.length(); i++ ){
+                        String letra = Character.toString(Datos.charAt(i));
                         
                         //Identifica si el siguiente en el stack es un operando o un número. En caso de ser número, lo añade al STACK.
                         // En caso de ser un operando, llama a la función correspondiente para calcular.
@@ -67,16 +73,15 @@ public class Controlador {
 
                                 default:
                                     double numero = Double.parseDouble(letra);
-                                
                                     pila.push(numero);
+                                    System.out.println(	pila.ver());
                             }
 
                     }
-
-                  
+                }
                   System.out.println("El resultado es: " + resultado);
-
-                } 
+                
+            
             //System.out.println("El resultado es: " + resultado);
 
         } catch (Exception e) {
